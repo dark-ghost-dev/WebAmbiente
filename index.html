@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principios Básicos de la Naturaleza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.webp" type="image/webp">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i class="bi bi-tree-fill text-2xl font-bold text-white"></i>
+                        <span class="ml-2 text-xl font-bold text-white">Naturaleza</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link active">Inicio</a>
+                        <a href="pages/blog.html" class="nav-link">Blog</a>
+                        <a href="pages/foro.html" class="nav-link">Foro</a>
+                        <a href="pages/equipo.html" class="nav-link">Equipo</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-900/95">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-white">Inicio</a>
+                <a href="pages/blog.html" class="block px-3 py-2 text-white">Blog</a>
+                <a href="pages/foro.html" class="block px-3 py-2 text-white">Foro</a>
+                <a href="pages/equipo.html" class="block px-3 py-2 text-white">Equipo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <video 
+            class="absolute top-0 left-0 w-full h-full object-cover max-w-none"
+            autoplay 
+            muted 
+            loop 
+            playsinline
+        >
+            <source src="videos/naturaleza.webm" type="video/webm">
+        </video>
+        
+        <!-- Overlay -->
+        <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 animate-fadeIn">
+                Principios Básicos de la <span class="text-green-400">Naturaleza</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 animate-fadeIn animation-delay-200">
+                Descubre los secretos del planeta Tierra y aprende a preservar nuestro hogar común
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn animation-delay-400 items-center">
+                <a href="pages/blog.html" class="btn-primary text-lg text-white">
+                    Explorar Blog
+                </a>
+                <a href="EQ3_PRINCIPIOS-BASICOS-DE-LA-NATURALEZA.pptx" 
+                   download="EQ3_PRINCIPIOS-BASICOS-DE-LA-NATURALEZA.pptx"
+                   class="px-8 py-3 bg-white/20 backdrop-blur-sm text-white border-2 border-white rounded-full font-semibold hover:bg-white/30 transition-all duration-300 flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Descargar Presentación
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Sections -->
+    <section class="section-padding gradient-green py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-white text-center mb-12 animate-fadeIn">
+                Explora Nuestros Posts
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <a href="pages/entrada1.html" class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 card-hover animate-slideInLeft group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="bi bi-globe-americas text-4xl text-white"></i>
+                        <span class="text-green-300 text-sm font-semibold">Entrada 1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">La Tierra como Ecosistema</h3>
+                    <p class="text-gray-200 text-sm">
+                        Aprende sobre los componentes bióticos y abióticos, las cuatro esferas de la Tierra y las condiciones que hacen posible la vida.
+                    </p>
+                </a>
+                
+                <!-- Card 2 -->
+                <a href="pages/entrada2.html" class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 card-hover animate-fadeIn group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="bi bi-lightning-charge-fill text-4xl text-white"></i>
+                        <span class="text-blue-300 text-sm font-semibold">Entrada 2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">Flujo de Energía</h3>
+                    <p class="text-gray-200 text-sm">
+                        Descubre cómo la energía fluye a través de los ecosistemas y los ciclos biogeoquímicos que mantienen la vida en el planeta.
+                    </p>
+                </a>
+                
+                <!-- Card 3 -->
+                <a href="pages/entrada3.html" class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 card-hover animate-fadeIn animation-delay-200 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="bi bi-flower1 text-4xl text-white"></i>
+                        <span class="text-orange-300 text-sm font-semibold">Entrada 3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-300 transition-colors">Rol de los Seres Vivos</h3>
+                    <p class="text-gray-200 text-sm">
+                        Conoce la función de productores, consumidores y descomponedores en los ecosistemas.
+                    </p>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="pages/entrada4.html" class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 card-hover animate-slideInRight group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="bi bi-bar-chart-fill text-4xl text-white"></i>
+                        <span class="text-red-300 text-sm font-semibold">Entrada 4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-red-300 transition-colors">Equilibrio Ecológico</h3>
+                    <p class="text-gray-200 text-sm">
+                        Aprende sobre el equilibrio de los ecosistemas y cómo las actividades humanas lo afectan.
+                    </p>
+                </a>
+
+                <!-- Card 5 -->
+                <a href="pages/entrada5.html" class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 card-hover animate-slideInRight group lg:col-start-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="bi bi-tree-fill text-4xl text-white"></i>
+                        <span class="text-teal-300 text-sm font-semibold">Entrada 5</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-teal-300 transition-colors">Futuro Sostenible</h3>
+                    <p class="text-gray-200 text-sm">
+                        Descubre la importancia de cuidar los ecosistemas y las acciones para construir un futuro sostenible.
+                    </p>
+                </a>
+            </div>
+            <div class="text-center mt-10">
+                <a href="pages/blog.html" class="inline-flex items-center px-8 py-3 bg-white text-green-800 rounded-full font-semibold hover:bg-green-100 transition-colors">
+                    Ver Todas las Entradas
+                    <i class="bi bi-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding bg-white py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slideInLeft">
+                    <h2 class="text-4xl font-bold text-green-800 mb-6">
+                        ¿Por qué aprender sobre la naturaleza?
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-6">
+                        Comprender los principios básicos de la naturaleza es fundamental para preservar nuestro planeta. 
+                        Cada ecosistema es una red compleja de interacciones que mantiene el equilibrio de la vida.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                            Mantener la biodiversidad
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                            Proteger los recursos naturales
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                            Combatir el cambio climático
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                            Crear un futuro sostenible
+                        </li>
+                    </ul>
+                </div>
+                <div class="animate-slideInRight">
+                    <img src="images/ecosistema-minimalista2.jpg" alt="Ecosistema" class="rounded-2xl shadow-2xl card-hover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section-padding gradient-sky py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="animate-fadeIn">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">4</div>
+                    <div class="text-green-200">Esferas terrestres</div>
+                </div>
+                <div class="animate-fadeIn animation-delay-200">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">10%</div>
+                    <div class="text-green-200">Energía por nivel trófico</div>
+                </div>
+                <div class="animate-fadeIn animation-delay-400">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">3</div>
+                    <div class="text-green-200">Roles principales</div>
+                </div>
+                <div class="animate-fadeIn animation-delay-600">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">∞</div>
+                    <div class="text-green-200">Razones para cuidar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-padding bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 animate-fadeIn">
+                Únete a la Conversación
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 animate-fadeIn animation-delay-200">
+                Comparte tus experiencias en la naturaleza y aprende de otros amantes del medio ambiente en nuestro foro.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn animation-delay-400 items-center">
+                <a href="pages/foro.html" class="btn-primary text-lg">
+                    Visitar Foro
+                </a>
+                <a href="pages/equipo.html" class="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                    Conocer al Equipo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Principios Básicos de la Naturaleza</h3>
+                    <p class="text-green-200">
+                        Un proyecto educativo sobre los fundamentos que rigen nuestro planeta y la vida que en él habita.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-green-200 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="pages/blog.html" class="text-green-200 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="pages/foro.html" class="text-green-200 hover:text-white transition-colors">Foro</a></li>
+                        <li><a href="pages/equipo.html" class="text-green-200 hover:text-white transition-colors">Equipo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Universidad</h4>
+                    <p class="text-green-200">
+                        Universidad Autónoma de Nuevo León<br>
+                        Facultad de Ingeniería Mecánica y Eléctrica<br>
+                        Ambiente y Sustentabilidad
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-green-800 mt-8 pt-8 text-center text-green-200">
+                <p>© 2026 Equipo 3 - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
