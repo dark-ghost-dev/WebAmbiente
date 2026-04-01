@@ -76,6 +76,48 @@ WebAmbiente/
 2. Abrir `index.html` en un navegador web
 3. No requiere servidor backend - funciona completamente en el cliente
 
+### Dockerización
+
+El proyecto incluye configuración para ejecutarse en un contenedor Docker con Nginx.
+
+#### Requisitos Previos
+- [Docker](https://www.docker.com/get-started) instalado en el sistema
+- [Docker Compose](https://docs.docker.com/compose/install/) (opcional, incluido en Docker Desktop)
+
+#### Instrucciones de Ejecución
+
+```bash
+# Construir y ejecutar el contenedor
+docker-compose up -d
+
+# Ver los contenedores en ejecución
+docker-compose ps
+
+# Ver logs del contenedor
+docker-compose logs -f
+
+# Detener el contenedor
+docker-compose down
+```
+
+El sitio estará disponible en: **http://localhost:8007**
+
+#### Construcción Manual
+
+```bash
+# Construir la imagen
+docker build -t naturaleza-web .
+
+# Ejecutar el contenedor
+docker run -p 8007:80 --name naturaleza naturaleza-web
+```
+
+#### Estructura Docker
+
+- **Dockerfile**: Imagen base `nginx:alpine` que sirve los archivos estáticos
+- **docker-compose.yml**: Configuración del servicio web
+- **nginx.conf**: Configuración personalizada de Nginx
+
 ## Navegación
 
 El sitio cuenta con un menú de navegación fijo con las siguientes secciones:
